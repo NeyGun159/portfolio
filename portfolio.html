@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyen Bui Nguyen's portfolio</title>
+  <link rel="shortcut icon" href="./assets/img/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-web/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/js/toggle-theme.js"></script>
+  <script src="./assets/js/page-active.js"></script>
+  <script src="./assets/js/portfolio.js"></script>
+</head>
+<body data-theme="dark" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+  <ul class="nav-list">
+    <li class="nav-list__item">
+      <a href="/index.html" class="nav-list__link nav-list__link-home">
+          <h2>Home</h2>
+          <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    <li class="nav-list__item">
+      <a href="/portfolio.html" class="nav-list__link nav-list__link-portfolio">
+          <h2>Portfolio</h2>
+          <i class="fa-solid fa-briefcase"></i>
+      </a>
+    </li>
+    <li class="nav-list__item">
+      <a href="/about.html" class="nav-list__link nav-list__link-about">
+          <h2>About</h2>
+          <i class="fa-solid fa-user"></i>
+      </a>
+    </li>
+    <li class="nav-list__item">
+      <a href="/contact.html" class="nav-list__link nav-list__link-contatc">
+          <h2>Contact</h2>
+          <i class="fa-solid fa-envelope-open"></i>
+      </a>
+    </li>
+  </ul>
+  <button class="toggle-theme">
+      <i class="fa-solid fa-moon toggle-theme-moon"></i>
+      <i class="fa-regular fa-lightbulb toggle-theme-light"></i>
+  </button>
+  <div class="main">
+    <!-- <div class="slide"></div> -->
+    <div class="portfolio" data-aos="fade-up">
+      <div class="portfolio__header">
+        <h1>
+          <span>my</span> portfolio
+        </h1>
+        <span>works</span>
+      </div>
+      <ul class="portfolio__nav-list">
+        <li class="portfolio__nav-list-item css-selected">css/javascript</li>
+        <li class="portfolio__nav-list-item react-selected">scss/react</li>
+        <li class="portfolio__nav-list-item api-selected">restful api</li>
+        <li class="portfolio__nav-list-item active all-selected">all</li>
+      </ul>
+      <div class="portfolio__card-list css-list ">
+        <div class="portfolio__card">
+          <div class="portfolio__card-img" style="background-image: url(./assets/img/demoshopee.png);"></div>
+          <h2>Demo Shopee</h2>
+        </div>
+        <div class="portfolio__card">
+          <div class="portfolio__card-img" style="background-image: url(./assets/img/travel-time.png);"></div>
+          <h2>Travel-time</h2>
+        </div>
+        <div class="portfolio__card">
+          <div class="portfolio__card-img" style="background-image: url(./assets/img/covid-19.png);"></div>
+          <h2>COVID-19</h2>
+        </div>
+      </div>
+      <div class="portfolio__card-list no-portfolio react-list ">No portfolio!</div>
+      <div class="portfolio__card-list api-list ">
+        <div class="portfolio__card">
+          <div class="portfolio__card-img" style="background-image: url(./assets/img/portfolio.png);"></div>
+          <h2>My Portfolio</h2>
+        </div>
+      </div>
+      <div class="portfolio__card-list all-list active">
+        <div class="portfolio__card">
+          <div class="portfolio__card-img" style="background-image: url(./assets/img/demoshopee.png);"></div>
+          <h2>Demo Shopee</h2>
+        </div>
+        <div class="portfolio__card">
+          <div class="portfolio__card-img" style="background-image: url(./assets/img/travel-time.png);"></div>
+          <h2>Travel-time</h2>
+        </div>
+        <div class="portfolio__card">
+          <div class="portfolio__card-img" style="background-image: url(./assets/img/covid-19.png);"></div>
+          <h2>COVID-19</h2>
+        </div>
+        <div class="portfolio__card">
+          <div class="portfolio__card-img" style="background-image: url(./assets/img/portfolio.png);"></div>
+          <h2>My Portfolio</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+            once: false
+        });
+</script>
+</html>

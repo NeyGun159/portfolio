@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyen Bui Nguyen's portfolio</title>
+  <link rel="shortcut icon" href="./assets/img/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-web/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/contact.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/js/toggle-theme.js"></script>
+  <script src="./assets/js/page-active.js"></script>
+</head>
+<body data-theme="dark">
+  <ul class="nav-list">
+    <li class="nav-list__item">
+      <a href="/index.html" class="nav-list__link nav-list__link-home">
+          <h2>Home</h2>
+          <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    <li class="nav-list__item">
+      <a href="/portfolio.html" class="nav-list__link nav-list__link-portfolio">
+          <h2>Portfolio</h2>
+          <i class="fa-solid fa-briefcase"></i>
+      </a>
+    </li>
+    <li class="nav-list__item">
+      <a href="/about.html" class="nav-list__link nav-list__link-about">
+          <h2>About</h2>
+          <i class="fa-solid fa-user"></i>
+      </a>
+    </li>
+    <li class="nav-list__item">
+      <a href="/contact.html" class="nav-list__link nav-list__link-contact">
+          <h2>Contact</h2>
+          <i class="fa-solid fa-envelope-open"></i>
+      </a>
+    </li>
+  </ul>
+  <button class="toggle-theme">
+      <i class="fa-solid fa-moon toggle-theme-moon"></i>
+      <i class="fa-regular fa-lightbulb toggle-theme-light"></i>
+  </button>
+  <div class="main">
+    <div class="slide"></div>
+    <div class="contact">
+      <div class="contact__header">
+        <h1>
+          <span>get in</span> touch
+        </h1>
+        <span>contact</span>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="contact__info">
+              <h2>don't be shy!</h2>
+              <p>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+              <ul class="contact__info-list">
+                <li class="contact__info-item">
+                  <div class="contact__info-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <h3>Address</h3>
+                  <span>Viet Nam</span>
+                </li>
+                <li class="contact__info-item">
+                  <div class="contact__info-icon">
+                    <i class="fa-solid fa-envelope-open"></i>
+                  </div>
+                  <h3>Email</h3>
+                  <span>nguyendaibang810@gmail.com</span>
+                </li>
+                <li class="contact__info-item">
+                  <div class="contact__info-icon">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <h3>Phone</h3>
+                  <a href="tel:0707451142">0707451142</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-8">
+            <form class="contact__form" action="" method="get">
+              <div class="contact__form-info">
+                <input type="text" class="contact__form-info-name" placeholder="YOUR NAME" required="Name is required">
+                <input type="email" class="contact__form-info-email" placeholder="YOUR EMAIL" required="Email is required">
+              </div>
+              <input type="text" class="contact__form-info-subject" placeholder="YOUR SUBJECT" required="Subject is required">
+              <textarea type="text" class="contact__form-info-message" placeholder="YOUR MESSAGE" required="Message is required"></textarea>
+              <button class="btn send-message" name="q" type="submit">
+                <div class="btn-text">send message</div>
+                <div class="btn-icon">
+                  <i class="fa-solid fa-paper-plane tada"></i>
+                </div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./assets/js/validator.js"></script>
+<script>
+  AOS.init({
+            once: false
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+        // Mong muốn của chúng ta
+        Validator({
+          form: '#form-1',
+          formGroupSelector: '.contact__form-info-name',
+          errorSelector: '.form-message',
+          rules: [
+            Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+            Validator.isEmail('#email'),
+            Validator.minLength('#password', 6),
+            Validator.isRequired('#password_confirmation'),
+            Validator.isConfirmed('#password_confirmation', function () {
+              return document.querySelector('#form-1 #password').value;
+            }, 'Mật khẩu nhập lại không chính xác')
+          ],
+          onSubmit: function (data) {
+            // Call API
+            console.log(data);
+          }
+        });
+
+
+        Validator({
+          form: '#form-2',
+          formGroupSelector: '.form-group',
+          errorSelector: '.form-message',
+          rules: [
+            Validator.isEmail('#email'),
+            Validator.minLength('#password', 6),
+          ],
+          onSubmit: function (data) {
+            // Call API
+            console.log(data);
+          }
+        });
+      });
+
+</script>
+<script>
+  // app.post('/contact.html, req, res') => {
+  //   res.send('');
+  // }
+</script>
+</html>

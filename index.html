@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Bui Nguyen's portfolio</title>
+    <link rel="shortcut icon" href="./assets/img/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/toggle-theme.js"></script>
+    <script src="./assets/js/page-active.js"></script>
+</head>
+<body data-theme="dark" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+    <div class="app">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a href="/index.html" class="nav-list__link nav-list__link-home">
+                <h2>Home</h2>
+                <i class="fa-solid fa-house"></i>
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <a href="/portfolio.html" class="nav-list__link nav-list__link-portfolio">
+                <h2>Portfolio</h2>
+                <i class="fa-solid fa-briefcase"></i>
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <a href="/about.html" class="nav-list__link nav-list__link-about">
+                <h2>About</h2>
+                <i class="fa-solid fa-user"></i>
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <a href="/contact.html" class="nav-list__link nav-list__link-contact">
+                <h2>Contact</h2>
+                <i class="fa-solid fa-envelope-open"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="toggle-theme">
+            <i class="fa-solid fa-moon toggle-theme-moon"></i>
+            <i class="fa-regular fa-lightbulb toggle-theme-light"></i>
+        </button>
+        <div class="main">
+            <div class="slide"></div>
+            <div class="home" data-aos="fade-up">
+                <div class="color-block"></div>
+                <div class="home__img">
+                  <div class="home__img-wrapper" style="background-image: url(./assets/img/avt.jpg);"></div>
+                </div>
+                <div class="home__text">
+                  <div class="home__text-wrapper">
+                    <h1>
+                      I'm Nguyen Bui Nguyen
+                      <span>Web Developer !</span>
+                    </h1>
+                    <p>
+                      Hello mọi người! Mình là Nguyễn, đang là học sinh cấp 3 tại trường THPT Bình An. Cơ duyên mình đến với nhàng IT là do có niềm đam mê với máy tính, sau khi xem các clip về lập trình Python của anh "Dũng lại lập trình" mình đã code theo và thấy khá hứng thú với việc này. Tháng 12/2021, tình cờ biết đến cộng đồng F8 Fullstack của anh Sơn qua một bạn trên TikTok, mình đã hoàn thành các khóa học HTML, CSS, JS và có được một số dự án cá nhân. Trải qua nhiều cay đắng, thật sự cảm ơn anh Sơn cũng như cộng đồng anh em đóng góp đã truyền động lực cho mình suốt thời gian qua giúp mình không bỏ cuộc.
+                    </p>
+                    <div class="btn-wrapper">
+                      <button class="btn portfolio-btn">
+                        <a href="/portfolio.html">
+                          <span class="btn-text">Portfolio</span>
+                          <span class="btn-icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </span>
+                        </a>
+                      </button>
+                      <button class="btn about-btn">
+                        <a href="/about.html">
+                          <span class="btn-text">About</span>
+                          <span class="btn-icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </span>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+            once: false
+        });
+</script>
+</html>
+
